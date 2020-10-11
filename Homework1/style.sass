@@ -1,0 +1,93 @@
+$fontStyle: 'Raleway', sans-serif;
+html
+    height: 100%;
+
+body
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+header
+    flex: 0 0 auto;
+
+main
+    flex: 1 0 auto;
+
+footer
+    flex: 0 0 auto;
+
+button,
+button:hover,
+button:active
+    outline: none !important
+    border:  none !important
+
+header,
+footer
+    background-color: #B564D4
+    height: 50px;
+    display: flex
+    justify-content: space-between
+
+.btn-cart
+    background-color: #65247F
+    color: white
+    display: flex
+    border: none
+    padding-left: 20px
+    height: 30px
+    width: 100px
+    padding-left: 20px
+    align-items: center
+    font-family: $fontStyle
+    font-style: bold
+    text-transform: uppercase
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: all 0.3s
+
+.header-text,
+.footer-text
+    margin-top: 13px;
+    margin-left: 10px;
+    font-family: $fontStyle
+    color: white
+
+.products
+    display: flex
+    justify-content: space-between
+    margin-top: 40px
+    flex-wrap: wrap
+    padding: 50px
+
+.product-item
+    width: 200px
+    border: 2px solid #65247F
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    background-color: #B564D4
+    color: white
+    font-family: $fontStyle
+    transition: all 0.3s
+    padding: 20px
+.product-item:hover
+    transform: scale(1.05);
+
+.img-item
+    outline: 1px solid white
+
+.by-btn
+    width: 150px
+    height: 30px
+    font-family: $fontStyle
+    background-color: #65247F
+    color: white
+    transition: all 0.3s
+
+
+button:hover
+    color: #65247F
+    background-color: white
+
+
