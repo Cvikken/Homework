@@ -1,12 +1,14 @@
 class ProductList {
   #goods;
+  //тоже не везде пока работает, но закрывает инфу от внешнего прочтения?..
   constructor(container = '.products') {
     this.container = container;
     this.#goods = [];
     this._allProducts = [];
 
     this._fetchGoods();
-    this.#render();
+    this.#render(); 
+    //не везде работает, но "закрывает" метод от использования в других местах
   }
 
   _fetchGoods() {
