@@ -32,6 +32,13 @@ class ProductList {
       block.insertAdjacentHTML('beforeend', productObject.getGoodHTML());
     }
   }
+ //тут я после той функции поняла что жизнь себе все-таки усложнила и добавила всё сюда. 
+//надеюсь, теперь всё правильно. вывела результат в консоль, чтобы было видно что всё работает.
+  AllPrice(){
+    for (let i=0; i < this._allProducts.length; i++) {
+    this.Summ.push(this._allProducts[i].price);}
+    console.log(this.Summ.reduce((accumulator, currentValue) => accumulator + currentValue));
+  }
 }
 class ProductItem {
   constructor(product, img='http://unsplash.it/150/150?random&gravity=center') { 
@@ -66,15 +73,15 @@ const list = new ProductList();
 //Проверила (добавив еще товаров на страницу), сумма меняется. Если я тут сама себя перемудрила - пожалуйста, расскажите как можно было сделать проще. Спасибо!
 //Потом в конце я всё это дело сократила и вставила querySelectorAll уже вниз, где вывожу инфу. 
 
-function SumPrices(arr){
-  const AllPrices = [];
-  for (let i=0; i < arr.length; i++) {
-  AllPrices.push(+(arr[i].innerHTML.slice(0, -1)));
-  }
-  return(AllPrices.reduce((accumulator, currentValue) => accumulator + currentValue))
-};
+//function SumPrices(arr){
+ // const AllPrices = [];
+ // for (let i=0; i < arr.length; i++) {
+  //AllPrices.push(+(arr[i].innerHTML.slice(0, -1)));
+  //}
+  //return(AllPrices.reduce((accumulator, currentValue) => accumulator + currentValue))
+//};
 
-console.log(SumPrices(document.querySelectorAll(".cost")));
+//console.log(SumPrices(document.querySelectorAll(".cost")));
 
 //const products = [
 //  {id: 1, title: 'Notebook', price: 20000},
